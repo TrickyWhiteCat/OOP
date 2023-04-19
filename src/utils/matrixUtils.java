@@ -1,5 +1,6 @@
 package utils;
 
+
 public class matrixUtils {
     public static double[][] zerosDouble2D(int numRow, int numCol) {
         double[][] res = new double[numRow][numCol];
@@ -55,4 +56,71 @@ public class matrixUtils {
         }
         return true;
     }
+
+    /**
+     * Return the sum of 2 matrices
+     * @param matA
+     * @param matB
+     * @throws IllegalArgumentException if either matrix is invalid or not in the same shape.
+     */
+    public static double[][] sum(double[][] matA, double[][] matB) {
+
+        // Validation
+        if (!isMatrix(matA) || !isMatrix(matB)) throw new IllegalArgumentException("Invalid input!");
+        if ((matA.length != matB.length) || (matA[0].length != matB[0].length)) throw new IllegalArgumentException("Shape mismatch!");
+
+        double[][] res = new double[matA.length][matA[0].length]; // An array to store the result
+        for (int i = 0; i < matA.length; i++) {
+            for (int j = 0; j < matA[0].length; j++) {
+                res[i][j] = matA[i][j] + matB[i][j];
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Substract 2 matrices
+     * @param matA
+     * @param matB
+     * @throws IllegalArgumentException if either matrix is invalid or not in the same shape.
+     */
+    public static double[][] substrct(double[][] matA, double[][] matB) {
+
+        // Validation
+        if (!isMatrix(matA) || !isMatrix(matB)) throw new IllegalArgumentException("Invalid input!");
+        if ((matA.length != matB.length) || (matA[0].length != matB[0].length)) throw new IllegalArgumentException("Shape mismatch!");
+
+        double[][] res = new double[matA.length][matA[0].length]; // An array to store the result
+        for (int i = 0; i < matA.length; i++) {
+            for (int j = 0; j < matA[0].length; j++) {
+                res[i][j] = matA[i][j] - matB[i][j];
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Perform the element-wise multiplication of 2 matrices
+     * @param matA
+     * @param matB
+     * @throws IllegalArgumentException if either matrix is invalid or not in the same shape.
+     */
+    public static double[][] multiply(double[][] matA, double[][] matB) {
+
+        // Validation
+        if (!isMatrix(matA) || !isMatrix(matB)) throw new IllegalArgumentException("Invalid input!");
+        if ((matA.length != matB.length) || (matA[0].length != matB[0].length)) throw new IllegalArgumentException("Shape mismatch!");
+
+        double[][] res = new double[matA.length][matA[0].length]; // An array to store the result
+        for (int i = 0; i < matA.length; i++) {
+            for (int j = 0; j < matA[0].length; j++) {
+                res[i][j] = matA[i][j] * matB[i][j];
+            }
+        }
+
+        return res;
+    }
+
 }

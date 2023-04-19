@@ -63,4 +63,38 @@ public class input {
         }
     }
 
+    public static double[][] getDoubleMatrixFromScanner(Scanner scan, PrintStream out) {
+        System.out.print("Enter the number of rows: ");
+        int numRows = scan.nextInt();
+        System.out.print("Enter the number of columns: ");
+        int numCols = scan.nextInt();
+
+        double[][] mat = new double[numRows][numCols];
+
+        for (int rowIdx = 0; rowIdx < numRows; rowIdx++) {
+            for (int colIdx = 0; colIdx < numCols; colIdx++) {
+                mat[rowIdx][colIdx] = scan.nextDouble();
+            }
+        }
+
+        return mat;
+    }
+
+    public static int[][] getIntMatrixFromScanner(Scanner scan, PrintStream out) {
+        System.out.print("Enter the number of rows: ");
+        int numRows = scan.nextInt();
+        System.out.print("Enter the number of columns: ");
+        int numCols = scan.nextInt();
+
+        int[][] mat = new int[numRows][numCols];
+
+        for (int rowIdx = 0; rowIdx < numRows; rowIdx++) {
+            for (int colIdx = 0; colIdx < numCols; colIdx++) {
+                mat[rowIdx][colIdx] = scan.nextInt();
+            }
+        }
+
+        return mat;
+    }
+
 }
