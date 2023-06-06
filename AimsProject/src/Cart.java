@@ -41,15 +41,15 @@ public class Cart {
         System.out.println(String.format("The disc %s was added to the cart.", disk.getInformation()));
     }
 
-    public void addDigitalVideoDisc(DigitalVideoDisc disk1, DigitalVideoDisc disk2) {
-        this.addDigitalVideoDisc(disk1);
-        this.addDigitalVideoDisc(disk2);
-    }
-
-    public void addDigitalVideoDisc(DigitalVideoDisc ... dvdList) {
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
         for (DigitalVideoDisc disk : dvdList) {
             this.addDigitalVideoDisc(disk);
         }
+    }
+
+    public void addDigitalVideoDisc(DigitalVideoDisc disk1, DigitalVideoDisc disk2) {
+        this.addDigitalVideoDisc(disk1);
+        this.addDigitalVideoDisc(disk2);
     }
 
     public void removeDigitalVideoDisc(DigitalVideoDisc disk) {
