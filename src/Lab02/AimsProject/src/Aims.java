@@ -17,7 +17,6 @@ public class Aims {
 
         System.out.println(String.format("Total Cost is: %.2f", anOrder.totalCost()));
 
-        System.out.println("Removing the 1st disc..");
         anOrder.removeDigitalVideoDisc(dvd1);
 
         anOrder.printCart();
