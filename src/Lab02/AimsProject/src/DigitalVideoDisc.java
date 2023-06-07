@@ -9,7 +9,10 @@ public class DigitalVideoDisc {
     private String category;
     private String director;
     private int length;
-    private double cost;    
+    private double cost;
+    private int id;
+
+    public static int nbDigitalVideoDisc = 0;
     
     @Override
     public boolean equals(Object o) {
@@ -80,6 +83,8 @@ public class DigitalVideoDisc {
     }
 
     public DigitalVideoDisc(String title, String category, String director, int length, double cost) {
+        this.id = nbDigitalVideoDisc;
+        this.nbDigitalVideoDisc++;
         this.title = title;
         this.category = category;
         this.director = director;
@@ -89,17 +94,23 @@ public class DigitalVideoDisc {
 
 
     public DigitalVideoDisc(String title) {
+        this.id = nbDigitalVideoDisc;
+        this.nbDigitalVideoDisc++;
         this.title = title;
     }
 
 
     public DigitalVideoDisc(String category, String title, double cost) {
+        this.id = nbDigitalVideoDisc;
+        this.nbDigitalVideoDisc++;
         this.title = title;
         this.category = category;
         this.cost = cost;
     }
 
     public DigitalVideoDisc(String director, String category, String title, double cost) {
+        this.id = nbDigitalVideoDisc;
+        this.nbDigitalVideoDisc++;
         this.director = director;
         this.title = title;
         this.category = category;
@@ -107,6 +118,8 @@ public class DigitalVideoDisc {
     }
 
     public DigitalVideoDisc() {
+        this.id = nbDigitalVideoDisc;
+        this.nbDigitalVideoDisc++;
     }
 
     public static void main(String[] args) {
