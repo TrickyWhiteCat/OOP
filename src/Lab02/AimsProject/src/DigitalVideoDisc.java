@@ -1,7 +1,6 @@
 package Lab02.AimsProject.src;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 public class DigitalVideoDisc {
@@ -30,6 +29,10 @@ public class DigitalVideoDisc {
         return Objects.hash(title, category, director, length, cost);
     }
 
+    @Override
+    public String toString() {
+        return String.format("id %d: %s - %s - %.3f$", this.id, this.title, this.director, this.cost);
+    }
     
     public String getTitle() {
         return this.title;
@@ -71,6 +74,10 @@ public class DigitalVideoDisc {
         this.cost = cost;
     }
 
+    public int getID() {
+        return this.id;
+    }
+
     public HashMap<String, String> getDetail() {
         HashMap<String, String> info = new HashMap<>();
         info.put("Title", this.title);
@@ -79,7 +86,15 @@ public class DigitalVideoDisc {
         info.put("Length", String.valueOf(this.length) + " minutes");
         info.put("Cost", String.format("%.3f", this.cost));
 
-        return info;
+       return info;
+    }
+
+    public boolean matchTitle(String title) {
+        return (this.title.toLowerCase().equals(title.toLowerCase()));
+    }
+
+    public boolean matchID(int id) {
+        return (this.id == id);
     }
 
     public DigitalVideoDisc(String title, String category, String director, int length, double cost) {

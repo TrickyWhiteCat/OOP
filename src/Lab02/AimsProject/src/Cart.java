@@ -3,9 +3,7 @@ package Lab02.AimsProject.src;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import Lab02.AimsProject.src.DigitalVideoDisc;
 
 public class Cart {
     public static final int MAX_NUMBER_ORDERED = 20;
@@ -131,5 +129,33 @@ public class Cart {
             total +=d.getCost();
         }
         return total;
+    }
+
+    public List<DigitalVideoDisc> searchByID(int id) {
+        List<DigitalVideoDisc> res = new ArrayList<DigitalVideoDisc>();
+        for (DigitalVideoDisc d : this.itemsOrdered) {
+            if (d == null) continue;
+            if (d.matchID(id)) {
+                res.add(d);
+            }
+        }
+        if (res.size() == 0) {
+            System.out.println("No disk found!");
+        }
+        return res;
+    }
+
+    public List<DigitalVideoDisc> searchByTitle(String title) {
+        List<DigitalVideoDisc> res = new ArrayList<DigitalVideoDisc>();
+        for (DigitalVideoDisc d : this.itemsOrdered) {
+            if (d == null) continue;
+            if (d.matchTitle(title)) {
+                res.add(d);
+            }
+        }
+        if (res.size() == 0) {
+            System.out.println("No disk found!");
+        }
+        return res;
     }
 }
