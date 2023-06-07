@@ -71,20 +71,20 @@ public class DigitalVideoDisc {
         this.cost = cost;
     }
 
-    public HashMap getInformation() {
+    public HashMap<String, String> getDetail() {
         HashMap<String, String> info = new HashMap<>();
         info.put("Title", this.title);
         info.put("Category", this.category);
         info.put("Director", this.director);
-        info.put("Length", String.valueOf(this.length));
-        info.put("Cost", String.valueOf(this.cost));
+        info.put("Length", String.valueOf(this.length) + " minutes");
+        info.put("Cost", String.format("%.3f", this.cost));
 
         return info;
     }
 
     public DigitalVideoDisc(String title, String category, String director, int length, double cost) {
         this.id = nbDigitalVideoDisc;
-        this.nbDigitalVideoDisc++;
+        nbDigitalVideoDisc++;
         this.title = title;
         this.category = category;
         this.director = director;
@@ -95,14 +95,14 @@ public class DigitalVideoDisc {
 
     public DigitalVideoDisc(String title) {
         this.id = nbDigitalVideoDisc;
-        this.nbDigitalVideoDisc++;
+        nbDigitalVideoDisc++;
         this.title = title;
     }
 
 
     public DigitalVideoDisc(String category, String title, double cost) {
         this.id = nbDigitalVideoDisc;
-        this.nbDigitalVideoDisc++;
+        nbDigitalVideoDisc++;
         this.title = title;
         this.category = category;
         this.cost = cost;
@@ -110,7 +110,7 @@ public class DigitalVideoDisc {
 
     public DigitalVideoDisc(String director, String category, String title, double cost) {
         this.id = nbDigitalVideoDisc;
-        this.nbDigitalVideoDisc++;
+        nbDigitalVideoDisc++;
         this.director = director;
         this.title = title;
         this.category = category;
@@ -119,13 +119,13 @@ public class DigitalVideoDisc {
 
     public DigitalVideoDisc() {
         this.id = nbDigitalVideoDisc;
-        this.nbDigitalVideoDisc++;
+        nbDigitalVideoDisc++;
     }
 
     public static void main(String[] args) {
         DigitalVideoDisc diskA = new DigitalVideoDisc("Times", "new", "Meow", 15, 5.99);
         //diskA.setCategory("Meow");
-        System.out.print(diskA.getInformation());
+        System.out.print(diskA.getDetail());
     }
 
 
