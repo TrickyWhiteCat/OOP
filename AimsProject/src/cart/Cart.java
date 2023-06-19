@@ -1,11 +1,10 @@
-package Lab02.AimsProject.src;
+package cart;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import Lab02.AimsProject.src.DigitalVideoDisc;
+import disc.DigitalVideoDisc;
 
 public class Cart {
     public static final int MAX_NUMBER_ORDERED = 20;

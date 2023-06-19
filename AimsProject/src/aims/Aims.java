@@ -1,4 +1,7 @@
-package Lab02.AimsProject.src;
+package aims;
+
+import cart.Cart;
+import disc.DigitalVideoDisc;
 
 public class Aims {
     public static void main(String[] args) {

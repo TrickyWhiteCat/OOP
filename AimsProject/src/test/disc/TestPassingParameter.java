@@ -1,4 +1,6 @@
-package Lab02.AimsProject.src;
+package test.disc;
+
+import disc.DigitalVideoDisc;
 
 public class TestPassingParameter {
     public static void main(String[] args) {
