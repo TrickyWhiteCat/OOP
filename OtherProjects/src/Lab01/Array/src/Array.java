@@ -9,7 +9,7 @@ public class Array {
         System.out.print("Enter the length of the array: ");
         int length = keyboard.nextInt();
         int[] arr = new int[length];
-
+        System.out.print(String.format("Enter %d elements of the array: ", length));
         for (int idx = 0; idx < length; idx++) {
             arr[idx] = keyboard.nextInt();
         }

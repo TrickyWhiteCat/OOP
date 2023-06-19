@@ -1,4 +1,6 @@
-package Lab02.AimsProject.src;
+package store;
+
+import disc.DigitalVideoDisc;
 
 public class Store {
     private DigitalVideoDisc[] itemsInStore;

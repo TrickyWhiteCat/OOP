@@ -1,4 +1,8 @@
-package Lab02.AimsProject.src;
+package test.store;
+
+import store.Store;
+
+import disc.DigitalVideoDisc;
 
 public class StoreTest {
     public static void main(String[] args) {

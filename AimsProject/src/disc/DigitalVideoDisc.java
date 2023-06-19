@@ -1,4 +1,4 @@
-package Lab02.AimsProject.src;
+package disc;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -127,6 +127,4 @@ public class DigitalVideoDisc {
         //diskA.setCategory("Meow");
         System.out.print(diskA.getDetail());
     }
-
-
 }

@@ -1,9 +1,9 @@
-package Lab02.AimsProject.src;
+package test.cart;
 
-import DigitalVideoDisc;
-import Cart;
+import cart.Cart;
+import disc.DigitalVideoDisc;
 
-public class Aims {
+public class CartTest {
     public static void main(String[] args) {
         Cart anOrder = new Cart();
 
@@ -15,14 +15,14 @@ public class Aims {
 
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
         anOrder.addDigitalVideoDisc(dvd3);
-        anOrder.addDigitalVideoDisc(new DigitalVideoDisc("Aladin", "Animation", 18.99f), new DigitalVideoDisc("Aladin", "Animation", 18.99f), new DigitalVideoDisc("Aladin", "Animation", 18.99f), new DigitalVideoDisc("Aladin", "Animation", 18.99f));
+        anOrder.addDigitalVideoDisc(dvd1, dvd2, dvd1);
         anOrder.printCart();
 
         System.out.println(String.format("Total Cost is: %.2f", anOrder.totalCost()));
 
-        System.out.println("Removing the 1st disc..");
         anOrder.removeDigitalVideoDisc(dvd1);
 
         anOrder.printCart();
     }
 }
+
