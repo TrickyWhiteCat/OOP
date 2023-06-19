@@ -1,4 +1,4 @@
-package disc;
+package hust.soict.dsai.aims.disc;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,9 +1,9 @@
-package aims;
+package hust.soict.dsai.aims.test.cart;
 
-import cart.Cart;
-import disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.cart.Cart;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
-public class Aims {
+public class CartTest {
     public static void main(String[] args) {
         Cart anOrder = new Cart();
 
@@ -25,3 +25,4 @@ public class Aims {
         anOrder.printCart();
     }
 }
+
