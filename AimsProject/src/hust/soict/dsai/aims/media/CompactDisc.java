@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class CompactDisc extends Media implements Playable{
     private String artist = null;
-    private ArrayList<Track> tracks = null;
+    private ArrayList<Track> tracks = new ArrayList<>();
 
     public CompactDisc(String title, String category, double cost) {
         super(title, category, cost);
@@ -74,7 +74,7 @@ public class CompactDisc extends Media implements Playable{
     public HashMap<String, String> getDetail() {
         HashMap<String, String> info = super.getDetail();
         info.put("artist", artist);
-        info.put("tracks", tracks.toString());
+        info.put("tracks", (tracks.size() == 0)  ? null : tracks.toString());
         return info;
     }
 }

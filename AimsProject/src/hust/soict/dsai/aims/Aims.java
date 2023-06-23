@@ -1,7 +1,9 @@
+/**
 package hust.soict.dsai.aims;
 
 import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.*;
+import hust.soict.dsai.aims.screen.StoreScreen;
 import hust.soict.dsai.aims.store.Store;
 
 import java.util.ArrayList;
@@ -190,6 +192,7 @@ public class Aims {
         }
         return filtered;
     }
+
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         Store store = new Store(new ArrayList<>(List.of(new DigitalVideoDisc("Rando", "Wha", 15))));
@@ -213,4 +216,4 @@ public class Aims {
             }
         }
     }
-}
+}**/
